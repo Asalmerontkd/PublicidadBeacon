@@ -158,10 +158,27 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
         }
     }
 
+    int contA = 0;
+    int contB = 0;
     public void launchPub(String mac)
     {
         Log.d("Beacon",mac);
-        //01:17:C5:55:D2:F1  Promocion para
-        //01:17:C5:58:3C:89
+
+        if (contA<1 && mac.equals("01:17:C5:55:D2:F1")) //01:17:C5:55:D2:F1 promocion A
+        {
+            //TODO intent promocion A
+            Intent promoA = new Intent(this, Promocion.class);
+            promoA.putExtra("imgUrl", "http://vitrosdr.com/tienda/media/wysiwyg/1-Anuncio-Vertical-40-.png");
+            startActivity(promoA);
+            contA++;
+        }
+        else if (contB<1 && mac.equals("01:17:C5:58:3C:89")) //01:17:C5:58:3C:89 promocion B
+        {
+            //TODO intent promocion B
+            Intent promoA = new Intent(this, Promocion.class);
+            promoA.putExtra("imgUrl", "https://tiendatelcel.com.mx//static/uploaded/plan_promocion/2013/DICIEMBRE-2013/comparte-navidad-2/S4--500plus-comparte-navidad.jpg");
+            startActivity(promoA);
+            contB++;
+        }
     }
 }
