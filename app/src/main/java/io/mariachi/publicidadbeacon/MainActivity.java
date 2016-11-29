@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
     public void launchPub(String mac)
     {
         Log.d("Beacon",mac);
-        //01:17:C5:55:D2:F1
+        //01:17:C5:55:D2:F1  Promocion para
         //01:17:C5:58:3C:89
     }
 }
