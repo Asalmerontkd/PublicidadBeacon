@@ -28,6 +28,6 @@ public class Promocion extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Glide.with(this).load(urlimg).into(imagen);
-        Toast.makeText(this, "URL IMG: "+urlimg, Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "URL IMG: "+urlimg, Toast.LENGTH_LONG).show();
     }
 }

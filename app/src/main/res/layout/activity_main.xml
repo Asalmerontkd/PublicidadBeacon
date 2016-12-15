@@ -17,5 +17,5 @@
         app:srcCompat="@drawable/mariachi"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/imageView2" />
+        android:id="@+id/imageView" />
 </RelativeLayout>
