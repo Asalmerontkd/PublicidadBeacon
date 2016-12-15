@@ -1,8 +1,10 @@
 package io.mariachi.publicidadbeacon;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -17,16 +19,15 @@ public class Promocion extends AppCompatActivity {
 
         imagen=(ImageView)findViewById(R.id.imgPromo);
 
-        Bundle bundle = getIntent().getExtras();
-        urlimg = bundle.getString("imgUrl");
-
-        Glide.with(this).load(urlimg).into(imagen);
+        Intent intent = getIntent();
+        urlimg = intent.getStringExtra("imgUrl");
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
+        Glide.with(this).load(urlimg).into(imagen);
+        Toast.makeText(this, "URL IMG: "+urlimg, Toast.LENGTH_LONG).show();
     }
 }
